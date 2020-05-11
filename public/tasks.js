@@ -1,11 +1,11 @@
 var tasks = {
 	"tasks": [
 		{
-			"name": "吴芷妍做作业",
+			"name": "吴芷妍",
 			"password": "13579"
 		},
 		{
-			"name": "郑禄曦阅读",
+			"name": "郑禄曦",
 			"password": "1357924680"
 		}
 	]
