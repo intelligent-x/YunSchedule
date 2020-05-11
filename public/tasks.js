@@ -29,7 +29,7 @@ document.querySelector("#start").onclick = function(){
 				if( tasks.tasks[i].password != document.querySelector("#taskpassword").value ){
 					document.querySelector("#message").innerHTML = "用户名或密码错误";
 				}else{
-					message.innerHTML = "";
+					document.querySelector("#message").innerHTML = "";
 					window.open("./static/" + document.querySelector("#taskname").value + "/main.html",target="_self");
 					sessionStorage.setItem( document.querySelector("#taskname").value, document.querySelector("#taskpassword").value );
 				}
