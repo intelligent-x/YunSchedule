@@ -3,6 +3,10 @@ var tasks = {
 		{
 			"name": "吴芷妍做作业",
 			"password": "13579"
+		},
+		{
+			"name": "郑禄曦阅读",
+			"password": "1357924680"
 		}
 	]
 }
@@ -27,6 +31,7 @@ document.querySelector("#start").onclick = function(){
 				}else{
 					document.querySelector("#message").innerHTML = "成功";
 					window.open("./static/" + document.querySelector("#taskname").value + "/main.html",target="_self");
+					sessionStorage.setItem( document.querySelector("#taskname").value, document.querySelector("#taskpassword").value );
 				}
 			}
 		}
