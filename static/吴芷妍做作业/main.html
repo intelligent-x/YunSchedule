@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="zh-cn">
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta http-equiv="Content-Type" content="text/html, charset=utf-8">
+	<title>云计时监督 :: 欢迎你</title>
+	<link rel="shortcut icon" type="image/x-icon" href="https://ss0.bdstatic.com/94oJfD_bAAcT8t7mm9GUKT-xh_/timg?image&quality=100&size=b4000_4000&sec=1589194948&di=59d94aec65acdcfc8c18917d2381245d&src=http://bpic.588ku.com/element_origin_min_pic/16/10/02/1557f0b6c7756a2.jpg">
+	<style type="text/css">
+		* {
+			padding: 0;
+			margin: 0;
+		}
+
+		body {
+			background-color: #242424;
+		}
+
+		canvas {
+			position: absolute;
+			left: 0;
+			top: 0;
+		}
+	</style>
+</head>
+<body>
+	<canvas id="canvas"></canvas>
+	<script type="text/javascript">
+		var canvas = document.getElementById('canvas'),
+			gd = canvas.getContext('2d'),
+			timer = undefined,
+			endTime = new Date( "May 11, 2020 22:00:00" ),
+			nowTime = undefined,
+			time = undefined,
+			hour = undefined,
+			minute = undefined,
+			second = undefined;
+
+		canvas.width = window.innerWidth;
+		canvas.height = window.innerHeight;
+
+		window.onload = function(){
+			clearInterval( timer );
+			timer = setInterval( function(){
+				update();
+				draw();
+			}, 1000 );
+		}
+
+		function draw(){
+			gd.clearRect( 0, 0, canvas.width, canvas.height );
+			gd.beginPath();
+			gd.fillStyle = '#FFF';
+			gd.textAlign = 'left';
+			gd.textBaseline = 'top';
+			gd.font = "bold " + ( window.innerWidth / 2 / 15 ) + "px Consolas";
+			gd.fillText( "吴芷妍, 你的作业时间还剩下: ", canvas.width / 10, canvas.height / 5 );
+			gd.beginPath();
+			gd.fillStyle = '#F55';
+			gd.textAlign = 'center';
+			gd.textBaseline = 'middle';
+			gd.font = "bold " + ( font = window.innerWidth / 10 ) + "px Consolas";
+			gd.fillText( hour + "时" + minute + "分" + second + "秒", canvas.width / 2, canvas.height / 2 );
+			if( nowTime >= endTime ){
+				clearInterval( timer );
+				gd.clearRect( 0, 0, canvas.width, canvas.height );
+				gd.beginPath();
+				gd.fillStyle = '#F55';
+				gd.textAlign = 'center';
+				gd.textBaseline = 'middle';
+				gd.font = "bold " + ( font = window.innerWidth / 10 ) + "px Consolas";
+				gd.fillText( "计时时间已到", canvas.width / 2, canvas.height / 2 );
+			}
+		}
+
+		function update(){
+			nowTime = new Date();
+			time = endTime - nowTime;
+			hour = time / 1000 / 3600;
+			minute = ( hour - Math.floor( hour ) ) * 60;
+			second = ( minute - Math.floor( minute ) ) * 60;
+			hour = Math.floor( hour );
+			minute = Math.floor( minute );
+			second = Math.floor( second );
+			if( hour.toString().length == 1 ) hour = "0" + hour;
+			if( minute.toString().length == 1 ) minute = "0" + minute;
+			if( second.toString().length == 1 ) second = "0" + second;
+		}
+
+	</script>
+</body>
+</html>

@@ -14,38 +14,71 @@ body {
 	height: 20%;
 	justify-content: left;
 	align-items: center;
-	margin-left: 10%;
 }
 
 #header > #title {
+	margin: 0 auto;
 	border-radius: 100%;
 	border: 5px solid #69C;
 }
 
 #header > #logo {
-	margin-left: 10px;
+	margin: 0 auto;
 }
 
 #main {
 	width: 100%;
-	height: 60%;
+	height: 70%;
 	position: absolute;
 	background-color: rgba( 255, 255, 255, .2 );
+	/*background-image: url("./../image/main.png") .7;*/
+	background-size: cover;
 }
 
 #main > h1 {
-	margin-left: 10%;
-	margin-top: 7%;
+	text-align: center;
+	margin-top: 2%;
 	color: #FFF;
-	font: bold 30px "幼圆";
+	font: bold 35px "幼圆";
+}
+
+#main > #form {
+	width: 25%;
+	height: 45%;
+	margin: 1% auto;
+	padding: 5px;
+	border: 3px solid #FFF;
+	border-radius: 10px;
+}
+
+#form > label {
+	transform: translateX( -50% );
+	color: #FFF;
+	font: bold 25px "幼圆";
+}
+
+#form > input {
+	display: block;
+	width:75%;
+	height: 10%;
+	padding: 5px;
+	margin: 10px auto;
+	font: bold 25px "幼圆";
+	color: #FFF;
+	background-color: rgba( 200, 200, 200, .5 );
+	border: 3px solid #FFF;
+	border-radius: 10px;
+}
+
+#form > input::placeholder {
+	color: #FFF;
 }
 
 #main > button {
 	display: block;
 	width: 200px;
 	height: 80px;
-	margin-left: 10%;
-	margin-top: 2%;
+	margin: 1% auto;
 	background-color: transparent;
 	color: #FFF;
 	font: bold 50px "幼圆";
@@ -73,6 +106,15 @@ body {
 
 #main > img:hover{
 	box-shadow: 0 0 30px #000;
+}
+
+#main > span {
+	display: block;
+	width: 100%;
+	height: 2%;
+	color: #F00;
+	text-align: center;
+	font: normal 25px "Consolas";
 }
 
 canvas {

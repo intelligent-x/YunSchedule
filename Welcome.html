@@ -10,15 +10,25 @@
 </head>
 <body>
 	<div id="header">
-		<img src="./image/title.png" id="title" width="7.5%" alt=" ">
+		<!-- <img src="./image/title.png" id="title" width="7.5%" alt=" "> -->
 		<img src="./image/logo.png" id="logo" alt=" ">
 	</div>
 	<div id="main">
 		<h1>开始我的云日程: </h1>
+		<div id="form">
+			<label>任务名称: </label>
+			<input type="text" id="taskname" placeholder="任务名称">
+			<br />
+			<br />
+			<label>任务密码: </label>
+			<input type="password" id="taskpassword">
+		</div>
 		<button id="start">开始</button>
-		<img src="./image/main.png" alt=" " width="50%" id="mainImage">
+		<span id="message"></span>
+		<!-- <img src="./image/main.png" alt=" " width="50%" id="mainImage"> -->
 	</div>
 	<canvas id="canvas"></canvas>
 	<script type="text/javascript" src="./public/welcome.js"></script>
+	<script type="text/javascript" src="./public/tasks.js"></script>
 </body>
 </html>
