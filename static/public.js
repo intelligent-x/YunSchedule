@@ -23,7 +23,10 @@ if( sessionStorage[name] === password ){
 }else{ 
 	document.getElementsByTagName('html')[0].removeChild( document.getElementsByTagName('body')[0] );
 	document.getElementsByTagName('html')[0].appendChild( body = document.createElement("body") );
-	body.innerHTML = "<h1 align='center' style='color:#F00'>你没有从开始界面打开!</h1>";
+	body.innerHTML = "<h1 id='error' align='center' style='color:#F00'>你没有从开始界面打开!</h1>";
+	document.getElementById("error").style.fontSize = window.innerWidth / 15 + "px";
+	document.getElementById("error").style.fontWeight = "bold";
+	document.getElementById("error").style.lineHeight = window.innerHeight + "px";
 };
 
 document.querySelector("#quit").onclick = function(){

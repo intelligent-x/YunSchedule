@@ -91,3 +91,17 @@ function drawLine( obj1, obj2 ){
 function getLength( obj1, obj2 ){
 	return Math.sqrt( ( obj1.x - obj2.x ) * ( obj1.x - obj2.x ) + ( obj1.y - obj2.y ) * ( obj1.y - obj2.y ) );
 }
+
+
+
+// CSS Styles
+if( document.body.type == "1" ){
+	var h1 = document.getElementsByTagName('h1')[0];
+	h1.style.fontSize = window.innerWidth / 15 + "px";
+	var labels = document.getElementsByTagName('label');
+	for( let i = 0 ; i < labels.length ; i ++ ){
+		labels[i].style.fontSize = window.innerWidth / 17.5 + "px";
+	}
+	var message = document.getElementById("message");
+message.style.fontSize = window.innerWidth / 15 + "px";
+}
