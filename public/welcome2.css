@@ -1,125 +1,265 @@
-* {
-	padding: 0;
-	margin: 0;
+@media screen and (max-width: 600px){
+	* {
+		padding: 0;
+		margin: 0;
+	}
+
+	body {
+		background-color: #68C;
+		overflow-x: hidden;
+	}
+
+	#header {
+		display: flex;
+		width: 100%;
+		height: 20%;
+		justify-content: left;
+		align-items: center;
+	}
+
+	#header > #title {
+		margin: 0 auto;
+		border-radius: 100%;
+		border: 5px solid #69C;
+	}
+
+	#header > #logo {
+		margin: 0 auto;
+		color: #FFF;
+		font: bold 35px "幼圆";
+	}
+
+	#main {
+		width: 100%;
+		height: 500px;
+		position: absolute;
+		background-color: rgba( 255, 255, 255, .2 );
+		/*background-image: url("./../image/main.png") .7;*/
+		background-size: cover;
+	}
+
+	#main > h1 {
+		text-align: center;
+		margin-top: 25px;
+		color: #FFF;
+		font-family: "幼圆";
+	}
+
+	#main > #form {
+		width: 80%;
+		height: 250px;
+		margin: 25px auto;
+		padding: 5px;
+		border: 3px solid #FFF;
+		border-radius: 10px;
+	}
+
+	#form > label {
+		transform: translateX( -50% );
+		color: #FFF;
+		margin-top: 15px;
+		margin-left: 15px;
+		font: bold 25px "幼圆";
+	}
+
+	#form > input {
+		display: block;
+		width: 75%;
+		height: 10%;
+		padding: 5px;
+		margin: 5% auto;
+		font: bold 25px "幼圆";
+		color: #FFF;
+		background-color: rgba( 200, 200, 200, .5 );
+		border: 3px solid #FFF;
+		border-radius: 10px;
+	}
+
+	#form > input::placeholder {
+		color: #FFF;
+	}
+
+	#main > button {
+		display: block;
+		width: 200px;
+		height: 80px;
+		margin: 0% auto;
+		background-color: transparent;
+		color: #FFF;
+		font: bold 50px "幼圆";
+		border: 2px solid #FFF;
+		border-radius: 2px;
+		transition: all .1s linear 0s;
+		cursor: pointer;
+	}
+
+	#main > button:hover {
+		border: 0;
+		background-color: #FFF;
+		color: #68C;
+	}
+
+	#main > img {
+		position: absolute;
+		right: 5%;
+		top: 50%;
+		border-radius: 10px;
+		box-shadow: 0 0 10px #000;
+		transform: translate( 0, -50% );
+		transition: all .2s linear 0s;
+	}
+
+	#main > img:hover{
+		box-shadow: 0 0 30px #000;
+	}
+
+	#main > span {
+		display: block;
+		width: 100%;
+		height: 2%;
+		color: #F00;
+		text-align: center;
+		font: normal 25px "Consolas";
+	}
+
+	canvas {
+		position: absolute;
+		left: 0;
+		top: 0;
+		z-index: -1;
+	}
 }
 
-body {
-	background-color: #68C;
-	overflow-x: hidden;
+
+@media screen and (min-width: 600px){
+	* {
+		padding: 0;
+		margin: 0;
+	}
+
+	body {
+		background-color: #68C;
+		overflow-x: hidden;
+	}
+
+	#header {
+		display: flex;
+		width: 100%;
+		height: 20%;
+		justify-content: left;
+		align-items: center;
+	}
+
+	#header > #title {
+		margin: 0 auto;
+		border-radius: 100%;
+		border: 5px solid #69C;
+	}
+
+	#header > #logo {
+		margin: 0 auto;
+		color: #FFF;
+		font: bold 50px "幼圆";
+	}
+
+	#main {
+		width: 100%;
+		height: 500px;
+		position: absolute;
+		background-color: rgba( 255, 255, 255, .2 );
+		/*background-image: url("./../image/main.png") .7;*/
+		background-size: cover;
+	}
+
+	#main > h1 {
+		text-align: center;
+		margin-top: 25px;
+		color: #FFF;
+		font-family: "幼圆";
+	}
+
+	#main > #form {
+		width: 50%;
+		height: 200px;
+		margin: 35px auto;
+		padding: 5px;
+		border: 3px solid #FFF;
+		border-radius: 10px;
+	}
+
+	#form > label {
+		transform: translateX( -50% );
+		color: #FFF;
+		margin-top: 15px;
+		margin-left: 15px;
+		font: bold 25px "幼圆";
+	}
+
+	#form > input {
+		display: block;
+		width: 75%;
+		height: 10%;
+		padding: 5px;
+		margin: 1% auto;
+		font: bold 25px "幼圆";
+		color: #FFF;
+		background-color: rgba( 200, 200, 200, .5 );
+		border: 3px solid #FFF;
+		border-radius: 10px;
+	}
+
+	#form > input::placeholder {
+		color: #FFF;
+	}
+
+	#main > button {
+		display: block;
+		width: 200px;
+		height: 80px;
+		margin: 0% auto;
+		background-color: transparent;
+		color: #FFF;
+		font: bold 50px "幼圆";
+		border: 2px solid #FFF;
+		border-radius: 2px;
+		transition: all .1s linear 0s;
+		cursor: pointer;
+	}
+
+	#main > button:hover {
+		border: 0;
+		background-color: #FFF;
+		color: #68C;
+	}
+
+	#main > img {
+		position: absolute;
+		right: 5%;
+		top: 50%;
+		border-radius: 10px;
+		box-shadow: 0 0 10px #000;
+		transform: translate( 0, -50% );
+		transition: all .2s linear 0s;
+	}
+
+	#main > img:hover{
+		box-shadow: 0 0 30px #000;
+	}
+
+	#main > span {
+		display: block;
+		width: 100%;
+		height: 2%;
+		color: #F00;
+		text-align: center;
+		font: normal 25px "Consolas";
+	}
+
+	canvas {
+		position: absolute;
+		left: 0;
+		top: 0;
+		z-index: -1;
 }
 
-#header {
-	display: flex;
-	width: 100%;
-	height: 20%;
-	justify-content: left;
-	align-items: center;
-}
-
-#header > #title {
-	margin: 0 auto;
-	border-radius: 100%;
-	border: 5px solid #69C;
-}
-
-#header > #logo {
-	margin: 0 auto;
-}
-
-#main {
-	width: 100%;
-	height: 70%;
-	position: absolute;
-	background-color: rgba( 255, 255, 255, .2 );
-	/*background-image: url("./../image/main.png") .7;*/
-	background-size: cover;
-}
-
-#main > h1 {
-	text-align: center;
-	margin-top: 3%;
-	color: #FFF;
-	font: bold 30px "幼圆";
-}
-
-#main > #form {
-	width: 40%;
-	height: 40%;
-	margin: 1% auto;
-	padding: 5px;
-	border: 3px solid #FFF;
-	border-radius: 10px;
-}
-
-#form > label {
-	transform: translateX( -50% );
-	color: #FFF;
-	font: normal 25px "幼圆";
-}
-
-#form > input {
-	display: block;
-	width: 75%;
-	height: 10%;
-	padding: 5px;
-	margin: 1% auto;
-	font: bold 25px "幼圆";
-	color: #FFF;
-	background-color: rgba( 200, 200, 200, .5 );
-	border: 3px solid #FFF;
-	border-radius: 10px;
-}
-
-#form > input::placeholder {
-	color: #FFF;
-}
-
-#main > button {
-	display: block;
-	width: 200px;
-	height: 80px;
-	margin: 0% auto;
-	background-color: transparent;
-	color: #FFF;
-	font: bold 50px "幼圆";
-	border: 2px solid #FFF;
-	border-radius: 2px;
-	transition: all .1s linear 0s;
-	cursor: pointer;
-}
-
-#main > button:hover {
-	border: 0;
-	background-color: #FFF;
-	color: #68C;
-}
-
-#main > img {
-	position: absolute;
-	right: 5%;
-	top: 50%;
-	border-radius: 10px;
-	box-shadow: 0 0 10px #000;
-	transform: translate( 0, -50% );
-	transition: all .2s linear 0s;
-}
-
-#main > img:hover{
-	box-shadow: 0 0 30px #000;
-}
-
-#main > span {
-	display: block;
-	width: 100%;
-	height: 2%;
-	color: #F00;
-	text-align: center;
-	font: normal 25px "Consolas";
-}
-
-canvas {
-	position: absolute;
-	left: 0;
-	top: 0;
-	z-index: -1;
 }
