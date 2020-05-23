@@ -1,48 +1,110 @@
+* {
+	padding: 0;
+	margin: 0;
+}
+
+body {
+	background-color: #68C;
+	overflow-x: hidden;
+}
+
+#header {
+	display: flex;
+	width: 100%;
+	height: 20%;
+	text-align: center;
+	align-items: center;
+}
+
+#header > #title {
+	margin: 0 auto;
+	border-radius: 100%;
+	border: 5px solid #69C;
+}
+
+#main {
+	width: 100%;
+	height: 500px;
+	position: absolute;
+	background-color: rgba( 255, 255, 255, .2 );
+	background-size: cover;
+}
+
+#main > h1 {
+	text-align: center;
+	margin-top: 25px;
+	color: #FFF;
+	font-family: "幼圆";
+}
+
+#form > label {
+	transform: translateX( -50% );
+	color: #FFF;
+	margin-top: 15px;
+	margin-left: 15px;
+	font: bold 25px "幼圆";
+}
+
+#form > input::placeholder {
+	color: #FFF;
+}
+
+#main > button {
+	display: block;
+	width: 200px;
+	height: 80px;
+	margin: 0% auto;
+	background-color: transparent;
+	color: #FFF;
+	font: bold 50px "幼圆";
+	border: 2px solid #FFF;
+	border-radius: 2px;
+	transition: all .1s linear 0s;
+	cursor: pointer;
+}
+
+#main > button:hover {
+	border: 0;
+	background-color: #FFF;
+	color: #68C;
+}
+
+#main > img {
+	position: absolute;
+	right: 5%;
+	top: 50%;
+	border-radius: 10px;
+	box-shadow: 0 0 10px #000;
+	transform: translate( 0, -50% );
+	transition: all .2s linear 0s;
+}
+
+#main > img:hover{
+	box-shadow: 0 0 30px #000;
+}
+
+#main > span {
+	display: block;
+	width: 100%;
+	height: 2%;
+	color: #F00;
+	text-align: center;
+	font: normal 25px "Consolas";
+}
+
+canvas {
+	position: absolute;
+	left: 0;
+	top: 0;
+	z-index: -1;
+}
+
 @media screen and (max-width: 600px){
-	* {
-		padding: 0;
-		margin: 0;
-	}
-
-	body {
-		background-color: #68C;
-		overflow-x: hidden;
-	}
-
-	#header {
-		display: flex;
-		width: 100%;
-		height: 20%;
-		justify-content: left;
-		align-items: center;
-	}
-
-	#header > #title {
-		margin: 0 auto;
-		border-radius: 100%;
-		border: 5px solid #69C;
-	}
 
 	#header > #logo {
 		margin: 0 auto;
 		color: #FFF;
 		font: bold 35px "幼圆";
-	}
-
-	#main {
-		width: 100%;
-		height: 500px;
-		position: absolute;
-		background-color: rgba( 255, 255, 255, .2 );
-		/*background-image: url("./../image/main.png") .7;*/
-		background-size: cover;
-	}
-
-	#main > h1 {
-		text-align: center;
-		margin-top: 25px;
-		color: #FFF;
-		font-family: "幼圆";
 	}
 
 	#main > #form {
@@ -52,14 +114,6 @@
 		padding: 5px;
 		border: 3px solid #FFF;
 		border-radius: 10px;
-	}
-
-	#form > label {
-		transform: translateX( -50% );
-		color: #FFF;
-		margin-top: 15px;
-		margin-left: 15px;
-		font: bold 25px "幼圆";
 	}
 
 	#form > input {
@@ -75,107 +129,31 @@
 		border-radius: 10px;
 	}
 
-	#form > input::placeholder {
-		color: #FFF;
-	}
+}
 
-	#main > button {
-		display: block;
-		width: 200px;
-		height: 80px;
-		margin: 0% auto;
-		background-color: transparent;
-		color: #FFF;
-		font: bold 50px "幼圆";
-		border: 2px solid #FFF;
-		border-radius: 2px;
-		transition: all .1s linear 0s;
-		cursor: pointer;
-	}
-
-	#main > button:hover {
-		border: 0;
-		background-color: #FFF;
-		color: #68C;
-	}
-
-	#main > img {
-		position: absolute;
-		right: 5%;
-		top: 50%;
-		border-radius: 10px;
-		box-shadow: 0 0 10px #000;
-		transform: translate( 0, -50% );
-		transition: all .2s linear 0s;
-	}
-
-	#main > img:hover{
-		box-shadow: 0 0 30px #000;
-	}
-
-	#main > span {
-		display: block;
-		width: 100%;
-		height: 2%;
-		color: #F00;
-		text-align: center;
-		font: normal 25px "Consolas";
-	}
-
-	canvas {
-		position: absolute;
-		left: 0;
-		top: 0;
-		z-index: -1;
+@keyframes typing {
+	from {
+		width: 0;
 	}
 }
 
+@keyframes caret {
+	50% {
+		border-color: transparent;
+	}
+}
 
 @media screen and (min-width: 600px){
-	* {
-		padding: 0;
-		margin: 0;
-	}
-
-	body {
-		background-color: #68C;
-		overflow-x: hidden;
-	}
-
-	#header {
-		display: flex;
-		width: 100%;
-		height: 20%;
-		justify-content: left;
-		align-items: center;
-	}
-
-	#header > #title {
-		margin: 0 auto;
-		border-radius: 100%;
-		border: 5px solid #69C;
-	}
 
 	#header > #logo {
+		width: 10.25em;
 		margin: 0 auto;
 		color: #FFF;
+		white-space: nowrap;
+		overflow: hidden;
 		font: bold 50px "幼圆";
-	}
-
-	#main {
-		width: 100%;
-		height: 500px;
-		position: absolute;
-		background-color: rgba( 255, 255, 255, .2 );
-		/*background-image: url("./../image/main.png") .7;*/
-		background-size: cover;
-	}
-
-	#main > h1 {
-		text-align: center;
-		margin-top: 25px;
-		color: #FFF;
-		font-family: "幼圆";
+		border-right: .05em solid #FFF;
+		animation: typing 3s steps(10) 0s, caret .5s steps(1) 0s infinite;
 	}
 
 	#main > #form {
@@ -185,14 +163,6 @@
 		padding: 5px;
 		border: 3px solid #FFF;
 		border-radius: 10px;
-	}
-
-	#form > label {
-		transform: translateX( -50% );
-		color: #FFF;
-		margin-top: 15px;
-		margin-left: 15px;
-		font: bold 25px "幼圆";
 	}
 
 	#form > input {
@@ -207,59 +177,5 @@
 		border: 3px solid #FFF;
 		border-radius: 10px;
 	}
-
-	#form > input::placeholder {
-		color: #FFF;
-	}
-
-	#main > button {
-		display: block;
-		width: 200px;
-		height: 80px;
-		margin: 0% auto;
-		background-color: transparent;
-		color: #FFF;
-		font: bold 50px "幼圆";
-		border: 2px solid #FFF;
-		border-radius: 2px;
-		transition: all .1s linear 0s;
-		cursor: pointer;
-	}
-
-	#main > button:hover {
-		border: 0;
-		background-color: #FFF;
-		color: #68C;
-	}
-
-	#main > img {
-		position: absolute;
-		right: 5%;
-		top: 50%;
-		border-radius: 10px;
-		box-shadow: 0 0 10px #000;
-		transform: translate( 0, -50% );
-		transition: all .2s linear 0s;
-	}
-
-	#main > img:hover{
-		box-shadow: 0 0 30px #000;
-	}
-
-	#main > span {
-		display: block;
-		width: 100%;
-		height: 2%;
-		color: #F00;
-		text-align: center;
-		font: normal 25px "Consolas";
-	}
-
-	canvas {
-		position: absolute;
-		left: 0;
-		top: 0;
-		z-index: -1;
-}
 
 }
