@@ -7,6 +7,10 @@ var tasks = {
 		{
 			"name": "郑禄曦",
 			"password": "1357924680"
+		},
+		{
+			"name": "吴诗轩",
+			"password": "59080"
 		}
 	]
 }
