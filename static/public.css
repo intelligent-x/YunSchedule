@@ -1,3 +1,8 @@
+@font-face {
+	font-family: "幼圆";
+	src: url("./../font/youyuan.ttf");
+}
+
 * {
 	padding: 0;
 	margin: 0;
